@@ -7,7 +7,9 @@ const {
   save 
   } = require("../models/tarefas-models")
 
+  // Essa classe é responsável pelos controllers referênte aos usuários
 class Tarefas {
+  // Metodo para criar tarefas
   async createTarefas(req, res) {
     try {
       const {
@@ -35,6 +37,7 @@ class Tarefas {
     }
   }
 
+  // Metodo para listar as tarefas
   async listTarefas(req, res) {
     try {
       const result = await findTarefas()
@@ -45,6 +48,7 @@ class Tarefas {
     }
   }
 
+  // Metodo para listar tarefa pelo id
   async listTarefasById(req, res) {
     try {
       const {id} = req.params
@@ -57,6 +61,7 @@ class Tarefas {
     }
   }
 
+  // Metodo para listar tarefa comcluidas ou pendente
   async listTarefasByIsCompleted(req, res) {
     try {
       const {isCompleted} = req.query
@@ -70,6 +75,7 @@ class Tarefas {
     }
   }
 
+  // Metodo para editar tarefa
   async editTarefas(req, res) {
     try {
       const { id } = req.params
@@ -86,6 +92,7 @@ class Tarefas {
     }
   }
 
+  // Metodo para deletar tarefa
   async tarefasDelete(req, res) {
     try {
       const { id } = req.params

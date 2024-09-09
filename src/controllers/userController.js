@@ -2,7 +2,10 @@ require('dotenv')
 const {hash, compare} = require('bcrypt')
 const {sign} = require('jsonwebtoken')
 const {createUser, findById, findAll, save, userDelete, findByEmail} = require('../models/users-models')
+
+// Essa classe é responsável pelos controllers referênte aos usuários
 class UserController {
+  // Metodo de login
   async login(req, res) {
     try {
       const {email, password} = req.body
@@ -28,6 +31,8 @@ class UserController {
       console.log(error)
     }
   }
+
+  // Metodo para criar usuários
   async create(req, res) {
     try {
       const {name, email, password} = req.body
@@ -49,6 +54,7 @@ class UserController {
     }
   }
 
+  // Metodo para listar usuários
   async listUser(req, res) {
     try {
       const result = await findAll()
@@ -60,6 +66,7 @@ class UserController {
     }
   }
 
+  // Método para buscar um usuário pelo Id
   async listUserById(req, res){
     try {
       const {id} = req.params
@@ -75,6 +82,7 @@ class UserController {
     }
   }
 
+  // Método para editar um usuário
   async editUser(req, res) {
     try {
       const { id } = req.params
@@ -96,6 +104,7 @@ class UserController {
     }
   }
 
+  // Método para deletar um usuário
   async deleteUser(req, res) {
     try {
       const { id } = req.params

@@ -1,6 +1,5 @@
 let express = require('express')
-let app = express()
-// const {listTarefas} = require('../controllers/tarefasController')
+
 const {
   create, 
   listUser, 
@@ -19,6 +18,7 @@ const {
 } = require('../controllers/tarefasController')
 const { authenticate } = require('../middlewares/auth')
 
+// Aqui temos as rotas para requisições
 
 const route = express.Router()
 

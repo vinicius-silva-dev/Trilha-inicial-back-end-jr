@@ -1,6 +1,8 @@
 const {PrismaClient} = require('@prisma/client')
 
 const prisma = new PrismaClient()
+
+// Essa classe é responsável por fazer as operações no banco de dados
 class tarefasModels {
   async createTarefas(tarefa) {
     try {
