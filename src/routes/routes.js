@@ -31,6 +31,9 @@ route.put('/users/edit/:id',authenticate, editUser)
 route.delete('/users/delete/:id',authenticate, deleteUser)
 
 // Tarefas
+route.get('/', (req, res) => {
+  res.json('Bem vindo!!')
+})
 route.get('/tarefas/list/',authenticate, listTarefas)
 route.get('/tarefas/:id/', authenticate, listTarefasById)
 route.get('/tarefas', authenticate, listTarefasByIsCompleted)
