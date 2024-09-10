@@ -1,13 +1,13 @@
 {
-  "name": "gerenciamento-de-tarefas",
+  "name": "gerenciamentodetarefas",
   "version": "1.0.0",
-  "description": "",
+  "description": "API para gerenciar tarefas",
   "main": "app.js",
   "scripts": {
     "dev": "node src/app.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Vinicius Silva Souza",
   "license": "ISC",
   "dependencies": {
     "@prisma/client": "^5.19.1",
