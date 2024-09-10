@@ -1,5 +1,5 @@
 {
-  "name": "gerenciamentodetarefas",
+  "name": "gerenciamento-de-tarefas",
   "version": "1.0.0",
   "description": "API para gerenciar tarefas",
   "main": "app.js",
