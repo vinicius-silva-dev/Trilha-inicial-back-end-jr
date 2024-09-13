@@ -4,7 +4,13 @@
   "description": "API para gerenciar tarefas.",
   "main": "app.js",
   "scripts": {
-    "start": "node src/app.js"
+    "start": "node src/app.js",
+    "dev": "cross-env DATABASE_URL=${DATABASE_URL_SQLITE} prisma migrate dev --name init && node src/index.js",
+    "migrate:dev": "cross-env DATABASE_URL=${DATABASE_URL_SQLITE} prisma migrate dev --name init",
+    "generate:dev": "cross-env DATABASE_URL=${DATABASE_URL_SQLITE} prisma generate",
+    "migrate:prod": "cross-env DATABASE_URL=${DATABASE_URL_POSTGRES} prisma migrate deploy",
+    "generate:prod": "cross-env DATABASE_URL=${DATABASE_URL_POSTGRES} prisma generate",
+    "start:prod": "cross-env DATABASE_URL=${DATABASE_URL_POSTGRES} node dist/index.js"
   },
   "keywords": [],
   "author": "Vinicius Silva Souza",
