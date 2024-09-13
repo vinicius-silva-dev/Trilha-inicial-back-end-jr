@@ -8,7 +8,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 app.use("/",router);
 
-const port = process.env.PORT
+const port = 3333
 app.listen(port, () => {
   console.log(`Server running!! ${port}`)
 })
