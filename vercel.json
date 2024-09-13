@@ -1,15 +1,9 @@
 {
   "version": 2,
-  "builds": {
-    "env": {
-      "DATABASE_URL": "file:./dev.db"
-    },
-    "commands": {
-      "build": "prisma generate && next build"
-    }
-
-  },
-    "routes": [
+  "builds": [
+    { "src": "src/app.js", "use": "@vercel/node" }
+  ],
+  "routes": [
     { "src": "/(.*)", "dest": "src/app.js" }
   ]
 }
