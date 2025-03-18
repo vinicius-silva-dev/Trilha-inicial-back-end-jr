@@ -1,5 +1,5 @@
 # Resumo
-  O **Gerenciamento de Tarefas** é uma Rest API onde tem como finalidade organizar as tarefas do dia a dia. Esta API permite que fazer diversas manimulações, sejam elas, criar, listar, editar e deletar, tanto na parte de usuários como em tarefas, além de ser possível fazer login.
+  O **Gerenciamento de Tarefas** é uma Rest API onde tem como finalidade organizar as tarefas do dia a dia. Esta API permite que fazer diversas manipulações, sejam elas, criar, listar, editar e deletar, tanto na parte de usuários como em tarefas, além de ser possível fazer login.
 
 # Tecnologias utilizadas
 - Node.js,
